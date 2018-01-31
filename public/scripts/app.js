@@ -1,10 +1,39 @@
-/*
-* Client-side JS logic goes here
-* jQuery is already loaded
-* Reminder: Use (and do all your DOM work in) jQuery's document ready function
-*/
-
 $(document).ready(function() {
+
+  function loadTweets() {
+    $.ajax({
+      type: 'GET',
+      url: '/tweets',
+      success: function(data) {
+        renderTweets(data);
+      }
+    });
+  }
+  
+  loadTweets();
+
+  $('form').submit((event) => {
+    event.preventDefault();
+
+    $.ajax({
+      type: 'POST',
+      url: $('form').attr('action'),
+      data: $('form').serialize(),
+      success: renderNewTweet
+    });
+    
+  });
+
+  function renderNewTweet() {
+    $.ajax({
+      type: 'GET',
+      url: '/tweets',
+      success: function(data) {
+        const newTweet = createTweetElement(data[0]);
+        newTweet.prependTo('.tweets');
+      }
+    });
+  }
   
   function renderTweets(tweetData) {
     tweetData.forEach((item) => {

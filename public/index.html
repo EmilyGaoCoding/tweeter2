@@ -26,29 +26,25 @@
   
   <!-- Page-specific (main) content here -->
   <div class="wrapper">
-    <div></div>
     
-    <div>
-      <main class="container">
-        
-        <section class="new-tweet">
-          <h2>Compose Tweet</h2>
-          <form method="POST" action="/tweets/">
-            <textarea name="text" placeholder="What are you humming about?"></textarea>
-            <input type="submit" value="Tweet">
-            <span class="counter">140</span>
-          </form>
-        </section>
-        
-        <section class="tweets">
-          
-        </section>
-        
-        <footer>&copy 2018 Emily Productions</footer>
-      </main>
-    </div>
+    <main class="container">
+      
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form method="POST" action="/tweets">
+          <textarea name="text" placeholder="What are you humming about?"></textarea>
+          <input type="submit" value="Tweet">
+          <span class="counter">140</span>
+        </form>
+      </section>
+      
+      <section class="tweets">
+      </section>
+      
+      <footer>&copy 2018 Emily Productions</footer>
+
+    </main>
     
-    <div></div>
   </div>
   
   <!-- External JS -->

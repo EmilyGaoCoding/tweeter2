@@ -30,6 +30,7 @@ body {
  main {
    background-color: white;
    padding-top: 110px;
+   grid-column-start: 2;
  }
 
  .wrapper {
