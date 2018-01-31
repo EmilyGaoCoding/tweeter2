@@ -1,0 +1,46 @@
+.tweets {
+  display: grid;
+}
+
+.tweet {
+  padding: 0;
+  border: 1px solid rgb(212, 210, 210);
+  margin: 0 2em 2em 2em;
+  border-radius: 7px;
+  opacity: 0.6;
+}
+
+.tweet:hover {
+  opacity: 1;
+}
+
+.tweet header {
+  background-color: rgb(241, 238, 238);
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+}
+
+.tweet img {
+  margin: .8em;
+  border-radius: 4px;
+}
+
+.tweet .username {
+  margin-top: .2em;
+  font-size: 2em;
+}
+
+.tweet .handle {
+  margin-top: 1.5em;
+  margin-left: 1em;
+}
+
+.tweet p {
+  width: 100%;
+  border-bottom: 1px solid rgb(233, 230, 230);  
+  padding: 0px 10px 10px 10px;
+}
+
+.tweet footer {
+  padding: 0px 10px 5px 10px;
+}
