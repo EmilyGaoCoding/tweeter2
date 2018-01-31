@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+  
   function loadTweets() {
     $.ajax({
       type: 'GET',
@@ -11,19 +11,33 @@ $(document).ready(function() {
   }
   
   loadTweets();
-
+  
+  
   $('form').submit((event) => {
     event.preventDefault();
-
-    $.ajax({
-      type: 'POST',
-      url: $('form').attr('action'),
-      data: $('form').serialize(),
-      success: renderNewTweet
-    });
-    
+    const charLeft = Number($('.counter').text());
+    if (charLeft == 140) {
+      $('.empty-tweet').slideDown(function() {
+        setTimeout(function() {
+          $('.empty-tweet').slideUp();
+        }, 5000);
+      });
+    } else if (charLeft < 0) {
+      $('.too-long-tweet').slideDown(function() {
+        setTimeout(function() {
+          $('too-long-tweet').slideUp();
+        }, 5000);
+      });
+    } else {
+      $.ajax({
+        type: 'POST',
+        url: $('form').attr('action'),
+        data: $('form').serialize(),
+        success: renderNewTweet
+      });
+    }
   });
-
+  
   function renderNewTweet() {
     $.ajax({
       type: 'GET',
@@ -67,7 +81,7 @@ $(document).ready(function() {
     
     return tweet;
   }
-
+  
 });
 
 

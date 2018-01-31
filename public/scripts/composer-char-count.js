@@ -5,7 +5,7 @@ $(document).ready(function() {
     $(this).siblings('.counter').text(charLeft);
     
     if (charLeft < 0) {
-      $(this).siblings('.counter').addClass('neg');
+      $(this).siblings('.counter').addClass('red');
     }
   }
   $('form').on('keyup', 'textarea', updateCount);

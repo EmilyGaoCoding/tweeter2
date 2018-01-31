@@ -26,14 +26,13 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+ .wrapper {
+   display: grid;
+   grid-template-columns: 1fr 2fr 1fr;
+ }
 
  main {
    background-color: white;
    padding-top: 110px;
    grid-column-start: 2;
- }
-
- .wrapper {
-   display: grid;
-   grid-template-columns: 1fr 2fr 1fr;
  }
