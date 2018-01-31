@@ -5,7 +5,7 @@
 */
 
 $(document).ready(function() {
-
+  
   function renderTweets(tweetData) {
     tweetData.forEach((item) => {
       return createTweetElement(item).appendTo('.tweets');
@@ -16,15 +16,13 @@ $(document).ready(function() {
     let tweet = $('<article>').addClass('tweet');
     
     const header = $('<header>');
-    const divImg = $('<div>');
     const img = $('<img>', {
       'src': tweetData.user.avatars.small 
     });
-    const divUsername = $('<div>', {
-      'class': 'username',
+    const h2 = $('<h2>', {
       text: tweetData.user.name
     });
-    const divHandle = $('<div>', {
+    const handle = $('<p>', {
       'class': 'handle',
       text: tweetData.user.handle
     });
@@ -35,13 +33,12 @@ $(document).ready(function() {
       text: Math.round(((Date.now() - tweetData.created_at) / 86400000))  + ' days ago'
     });
     
-    divImg.append(img);
-    header.append(divImg, divUsername, divHandle);
+    header.append(img, h2, handle);
     tweet.append(header, p, footer);
     
     return tweet;
   }
-  
+
 });
 
 
