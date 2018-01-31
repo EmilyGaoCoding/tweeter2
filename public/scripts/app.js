@@ -5,11 +5,15 @@
 */
 
 $(document).ready(function() {
+
+  function renderTweets(tweetData) {
+    tweetData.forEach((item) => {
+      return createTweetElement(item).appendTo('.tweets');
+    })
+  }
   
-  $('#tweets-container').append($tweet); 
   function createTweetElement(tweetData) {
-    const article = $('<article>');
-    article.addClass('tweet').appendTo('.tweets');
+    let tweet = $('<article>').addClass('tweet');
     
     const header = $('<header>');
     const divImg = $('<div>');
@@ -31,9 +35,11 @@ $(document).ready(function() {
       text: Math.round(((Date.now() - tweetData.created_at) / 86400000))  + ' days ago'
     });
     
-    div1.append(img);
+    divImg.append(img);
     header.append(divImg, divUsername, divHandle);
-    article.append(header, p, footer);
+    tweet.append(header, p, footer);
+    
+    return tweet;
   }
   
 });
