@@ -12,7 +12,6 @@ $(document).ready(function() {
   
   loadTweets();
   
-  
   $('form').submit((event) => {
     event.preventDefault();
     const charLeft = Number($('.counter').text());
@@ -23,9 +22,9 @@ $(document).ready(function() {
         }, 5000);
       });
     } else if (charLeft < 0) {
-      $('.too-long-tweet').slideDown(function() {
+      $('.long-tweet').slideDown(function() {
         setTimeout(function() {
-          $('too-long-tweet').slideUp();
+          $('long-tweet').slideUp();
         }, 5000);
       });
     } else {
@@ -81,6 +80,13 @@ $(document).ready(function() {
     
     return tweet;
   }
+
+  // Compose button behavior
+  $('nav a').click((event) => {
+    event.preventDefault();
+    $('.new-tweet').slideToggle();
+    $('.new-tweet textarea').focus();
+  })
   
 });
 

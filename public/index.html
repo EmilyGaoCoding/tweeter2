@@ -14,22 +14,29 @@
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
   <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  
 </head>
 
 <body>
   
   <!-- Top nav bar (fixed) -->
-  <nav id="nav-bar">
+  <nav>
     <img class="logo" src="/images/bird.png">
     <span class="header">Tweeter</span>
+    <ul>
+      <li><a href="#"><i class="far fa-edit"></i>Compose</a></li>
+    </ul>
   </nav>
   
   <!-- Page-specific (main) content here -->
   <div class="wrapper">
     
     <main class="container">
-        <p class="empty-tweet">Don't forget to put your thoughts down before submitting.</p>
-        <p class="too-long-tweet">Remove some words before tweeting or split into multiple tweets.</p>
+      
+      <!-- New Tweet -->
+      <p class="empty-tweet">Don't forget to put your thoughts down before submitting.</p>
+      <p class="long-tweet">Remove some words before tweeting or split into multiple tweets.</p>
       
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
@@ -40,11 +47,12 @@
         </form>
       </section>
       
+      <!-- tweets -->
       <section class="tweets">
       </section>
       
       <footer>&copy 2018 Emily Productions</footer>
-
+      
     </main>
     
   </div>
