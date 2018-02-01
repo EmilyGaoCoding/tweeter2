@@ -145,24 +145,25 @@ nav {
     border-top-right-radius: 7px;
     display: grid;
     grid-template-columns: 1fr 5fr 1fr; }
-  .tweet img {
-    grid-column-start: 1;
-    margin: .8em;
-    border-radius: 4px; }
-  .tweet h2 {
-    grid-column-start: 2;
-    margin-top: .5em; }
-  .tweet .handle {
-    grid-column-start: 3;
-    margin-top: 1.5em;
-    margin-left: 1em;
-    border-bottom: none; }
+    .tweet header img {
+      grid-column-start: 1;
+      margin: 10px;
+      border-radius: 4px; }
+    .tweet header h2 {
+      grid-column-start: 2;
+      margin-top: .5em; }
+    .tweet header .handle {
+      grid-column-start: 3;
+      margin-top: 1.5em;
+      margin-left: 1em;
+      border-bottom: none; }
   .tweet p {
     width: 100%;
     border-bottom: 1px solid #e9e6e6;
     padding: 0px 10px 10px 10px; }
   .tweet footer {
-    padding: 0px 10px 5px 10px; }
+    padding: 0 10px 12px 10px;
+    font-size: .7em; }
 
 body {
   margin: 0;
@@ -178,7 +179,7 @@ main {
   padding-top: 110px;
   grid-column-start: 2; }
 
-footer {
+.copyright {
   text-align: center; }
 
 /*# sourceMappingURL=layout.css.map */
