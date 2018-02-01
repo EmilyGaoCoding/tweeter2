@@ -1,25 +1,28 @@
+$grey: WhiteSmoke;
+$darkerGrey: Silver;
+
 .new-tweet {
   display: none;
-  background-color: rgb(241, 238, 238);
-  border: 1px solid rgb(212, 210, 210);
+  background-color: $grey;
+  border: 1px $darkerGrey;
   margin: 0 2em 2em 2em;
-  padding: 0px 10px 10px 10px;
+  padding: 1px 10px 10px 10px;
   border-radius: 7px;
-}
-
-.new-tweet h2 {
-  width: 100%;
-  border-bottom: 2px solid black;
-}
-
-.new-tweet textarea {
-  width: 100%;
-  padding-top: 5px;
-}
-
-.new-tweet input {
-  margin-left: 0;
-  background-color: rgb(241, 238, 238);
+  
+  h2 {
+    width: 100%;
+    border-bottom: 2px solid black;
+  }
+  
+  textarea {
+    width: 100%;
+    padding-top: 5px;
+  }
+  
+  input {
+    margin-left: 0;
+    background-color: rgb(241, 238, 238);
+  }
 }
 
 .counter {

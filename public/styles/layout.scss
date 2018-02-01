@@ -1,0 +1,35 @@
+ html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+* {
+  font-family: 'Nunito', sans-serif;
+}
+@import 'nav';
+@import 'new-tweet';
+@import 'tweets';
+
+$grey: WhiteSmoke;
+$darkerGrey: Silver;
+
+body {
+  margin: 0;
+  color: #244751;
+  background-color: #eee;
+}
+ .wrapper {
+   display: grid;
+   grid-template-columns: 1fr 2fr 1fr;
+ }
+
+ main {
+   background-color: white;
+   padding-top: 110px;
+   grid-column-start: 2;
+ }
+
+ footer {
+   text-align: center;
+ }
