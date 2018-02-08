@@ -32,7 +32,10 @@ $(document).ready(function() {
         type: 'POST',
         url: $('form').attr('action'),
         data: $('form').serialize(),
-        success: renderNewTweet
+        success: () => {
+          $('form')[0].reset();
+          renderNewTweet();
+        }
       });
     }
   });
